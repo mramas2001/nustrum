@@ -1,0 +1,84 @@
+/* webkit tools */
+::-webkit-input-placeholder {
+  color: #fff; }
+
+::-moz-placeholder {
+  color: #fff; }
+
+:-ms-input-placeholder {
+  color: #fff; }
+
+:-moz-placeholder {
+  color: #fff; }
+
+body {
+  margin: 0 auto;
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif; }
+
+a {
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer; }
+
+#header-head-con {
+  background-color: #263856;
+  color: #fff;
+  font-size: 20px;
+  padding: 10px;
+  text-align: center; }
+  #header-head-con #header-head {
+    margin: 0 auto; }
+    #header-head-con #header-head #header-logo {
+      display: inline-block;
+      vertical-align: middle; }
+      #header-head-con #header-head #header-logo img {
+        width: 100px;
+        padding: 5px; }
+    #header-head-con #header-head #link {
+      display: inline-block;
+      padding-left: 7%;
+      padding-right: 7%; }
+      #header-head-con #header-head #link a {
+        padding: 20px; }
+    #header-head-con #header-head #search-box {
+      display: inline-block;
+      border: 2px solid #fff;
+      background-color: #263856; }
+      #header-head-con #header-head #search-box i.fa.fa-search {
+        cursor: pointer;
+        padding-left: 10px; }
+      #header-head-con #header-head #search-box input {
+        vertical-align: middle;
+        padding: 10px;
+        border: none;
+        font-size: 15px;
+        color: #fff;
+        background-color: #263856; }
+      #header-head-con #header-head #search-box input:focus {
+        outline: none !important; }
+
+#header-body {
+  text-align: center;
+  line-height: 0px; }
+  #header-body img {
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.7; }
+
+#header-footer {
+  background-color: #e4e4e4; }
+  #header-footer #wifi, #header-footer #comment {
+    width: 54px;
+    background-color: #fdb448;
+    border-radius: 100px; }
+    #header-footer #wifi i.fa.fa-wifi, #header-footer #comment i.fa.fa-wifi, #header-footer #comment i.fa.fa-comment {
+      padding: 10px;
+      font-size: 30px;
+      color: #fff; }
+  #header-footer #comment i.fa.fa-comment {
+    padding: 12px; }
+  #header-footer p {
+    text-align: left; }
+
+/*# sourceMappingURL=index.css.map */

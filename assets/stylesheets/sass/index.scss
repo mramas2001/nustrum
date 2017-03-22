@@ -1,15 +1,52 @@
 $main-color: #263856;
-$hf-color: #e4e4e4;
+$main-font-family: 'Roboto', sans-serif;
+$main-font: 17px;
+$hf-color: #e8e8e8;
+$button-color: #38af38;
+
+@mixin placeholder {
+    color: #fff; 
+    font-family: $main-font-family; 
+    font-weight: 100;
+    font-size: 13px;
+}
+
+@mixin button {
+    text-align: left;
+    background-color: $button-color;
+    color: #fff;
+    font-weight: 600;
+    padding: 10px 20px 10px 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    width: 98px;
+    cursor: pointer;
+}
+
+@mixin img-icon {
+    height: 50px;
+    padding: 10px;
+}
+
+@mixin p {
+    text-align: left;
+    width: 175px;
+    font-family: inherit;
+    font-size: 15px;
+    vertical-align: bottom;
+    margin-bottom: 12px;
+    color: $main-color;
+}
 
 /* webkit tools */
-::-webkit-input-placeholder { color: #fff; }
-::-moz-placeholder { color: #fff; }
-:-ms-input-placeholder { color: #fff; }
-:-moz-placeholder { color: #fff; }
+::-webkit-input-placeholder { @include placeholder(); }
+::-moz-placeholder { @include placeholder(); }
+:-ms-input-placeholder { @include placeholder(); }
+:-moz-placeholder { @include placeholder(); }
 
 body {
     margin: 0 auto;
-    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif
+    font-family: $main-font-family;
 }
 
 a {
@@ -21,12 +58,13 @@ a {
 #header-head-con {
     background-color: $main-color;
     color: #fff;
-    font-size: 20px;
+    font-size: $main-font;
     padding: 10px;
     text-align: center;
 
     #header-head {
         margin: 0 auto;
+        width: 80%;
        
         #header-logo {
             display: inline-block;
@@ -40,13 +78,13 @@ a {
 
         #link {
             display: inline-block;
-            padding-left: 7%;
-            padding-right: 7%;
+            padding-left: 10%;
+            padding-right: 10%;
 
             a {
                 padding: 20px;
+                letter-spacing: 2px;
             }
-            
         }
 
         #search-box {
@@ -62,7 +100,7 @@ a {
 
             input {
                 vertical-align: middle;
-                padding: 10px;
+                padding: 6px;
                 border: none;
                 font-size: 15px;
                 color: #fff;
@@ -80,42 +118,233 @@ a {
     text-align: center;
     line-height: 0px;
 
-    img {
+    #bg {
         width: 100%;
         top: 0;
         left: 0;
         opacity: 0.7;
     }
+
+    #hb-phone-button-text {
+        line-height: 90%;
+        color: #263856;
+        position: absolute;
+        top: calc(100% - 82%);
+        width: 100%;
+
+        #hb-button-text {
+            display: inline-block;
+            position: absolute;
+            left: calc(100% - 82%);
+
+            p {
+                text-align: left;
+                line-height: 1.3em;
+                letter-spacing: .9px;
+                margin: 0px;
+             }
+
+            #p1{
+                font-size: 3vw;
+                width: 65%;
+            }
+
+            #p2 {
+                font-size: 2.5vw;
+                font-weight: 100;
+                width: 51%;
+            }
+
+            #button {
+                @include button();
+            }
+        }
+
+        #phone {
+            width: 30%;
+            min-width: 200px;
+            padding-left: 38%;
+        }
+    }
 }
 
 #header-footer {
     background-color: $hf-color;
+    text-align: center;
 
-    #wifi {
-        width: 54px;
-        background-color: #fdb448;
-        border-radius: 100px;
+    #hf-wifi {
+        width: 290px;
+        display: inline-block;
+        vertical-align: middle;
+        padding: 5px 0px 5px 0px;
+
+        #wifi {
+            display: inline-flex;
+        }
+    }
+
+    #hf-connect {
+        @extend #hf-wifi;
         
-        i.fa.fa-wifi {
-            padding: 10px;
-            font-size: 30px;
-            color: #fff;
-        }
-
-    }
-
-    #comment {
-        @extend #wifi;
-
-        i.fa.fa-comment {
-            @extend i.fa.fa-wifi;
-            padding: 12px;
+        #connect {
+            @extend #wifi;
         }
     }
-    
+
+    #hf-comment {
+        @extend #hf-wifi;
+
+        #comment {
+            @extend #wifi;
+        }
+    }
 
     p {
-        text-align: left;
+        @include p();
+        display: inline-block;
     }
-       
+
+    img {
+        @include img-icon();
+    }
+}
+
+#main-con {
+    color: #263856;
+    text-align: center;
+
+    #top-con {
+        padding-top: 20px;
+
+        #phone {
+            width: 180px;
+        }
+
+        #top-con-button-text {
+            display: inline-block;
+            vertical-align: top;
+            width: 450px;
+            padding-left: 15px;
+
+            p {
+                text-align: left;
+                margin: 0px;
+                letter-spacing: 1px;
+             }
+
+            #p1{
+                font-size: 23px;
+                padding: 10px 0px 10px 0px;
+            }
+
+            #p2 {
+                font-size: 16px;
+            }
+
+            #button {
+                @include button();
+                margin-top: 15px;
+            }
+        }
+    }
+
+    #bottom-con {
+        padding-top: 20px;
+
+        #bc-left {
+            display: inline-block;
+            width: 375px;
+
+            p {
+                font-size: 23px;
+                margin: 0px;
+                text-align: left;
+            }
+
+            #phone {
+                vertical-align: top;
+                width: 90px;
+                padding-top: 10px;
+            }
+
+            #icon-con {
+                width: 255px;
+                display: inline-block;
+                margin-left: 10px;
+
+                  #hf-wifi {
+                        display: inline-block;
+                        vertical-align: middle;
+                        text-align: left;
+
+                    #wifi {
+                        float: left;
+                    }
+
+                    img {
+                        @include img-icon();
+                        padding: 10px 10px 0px 0px;
+                    }
+
+                    p  {
+                        @include p();
+                        margin: 20px 0px 0px 0px;
+                        background-color: $hf-color;
+                        width: 255px;
+                        border-radius: 20px 0px 0px 20px;
+                    }
+                }
+
+                #hf-connect {
+                    @extend #hf-wifi;
+                    
+                    #connect {
+                        @extend #wifi;
+                    }
+
+                    img {
+                        @include img-icon();
+                        padding: 10px 10px 0px 0px;
+                    }
+
+                    p {
+                        @include p();
+                        margin: 20px 0px 0px 0px;
+                        background-color: $hf-color;
+                        width: 255px;
+                        border-radius: 20px 0px 0px 20px;
+                    }
+                }
+
+                #hf-comment {
+                    @extend #hf-wifi;
+
+                    #comment {
+                        @extend #wifi;
+                    }
+
+                    img {
+                        @include img-icon();
+                        padding: 10px 10px 0px 0px;
+                    }
+
+                    p {
+                        @include p();
+                        margin: 20px 0px 0px 0px;
+                        background-color: $hf-color;
+                        width: 255px;
+                        border-radius: 20px 0px 0px 20px;
+                    }
+                }
+            }
+
+          
+        }
+
+        #bc-right {
+            display: inline-block;
+            width: 300px;
+            background-color: $main-color;
+        }
+    }
 }

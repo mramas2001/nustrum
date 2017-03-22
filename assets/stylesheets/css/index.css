@@ -1,19 +1,31 @@
 /* webkit tools */
 ::-webkit-input-placeholder {
-  color: #fff; }
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-size: 13px; }
 
 ::-moz-placeholder {
-  color: #fff; }
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-size: 13px; }
 
 :-ms-input-placeholder {
-  color: #fff; }
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-size: 13px; }
 
 :-moz-placeholder {
-  color: #fff; }
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-size: 13px; }
 
 body {
   margin: 0 auto;
-  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif; }
+  font-family: "Roboto", sans-serif; }
 
 a {
   color: #fff;
@@ -23,11 +35,12 @@ a {
 #header-head-con {
   background-color: #263856;
   color: #fff;
-  font-size: 20px;
+  font-size: 17px;
   padding: 10px;
   text-align: center; }
   #header-head-con #header-head {
-    margin: 0 auto; }
+    margin: 0 auto;
+    width: 80%; }
     #header-head-con #header-head #header-logo {
       display: inline-block;
       vertical-align: middle; }
@@ -36,10 +49,11 @@ a {
         padding: 5px; }
     #header-head-con #header-head #link {
       display: inline-block;
-      padding-left: 7%;
-      padding-right: 7%; }
+      padding-left: 10%;
+      padding-right: 10%; }
       #header-head-con #header-head #link a {
-        padding: 20px; }
+        padding: 20px;
+        letter-spacing: 2px; }
     #header-head-con #header-head #search-box {
       display: inline-block;
       border: 2px solid #fff;
@@ -49,7 +63,7 @@ a {
         padding-left: 10px; }
       #header-head-con #header-head #search-box input {
         vertical-align: middle;
-        padding: 10px;
+        padding: 6px;
         border: none;
         font-size: 15px;
         color: #fff;
@@ -60,25 +74,177 @@ a {
 #header-body {
   text-align: center;
   line-height: 0px; }
-  #header-body img {
+  #header-body #bg {
     width: 100%;
     top: 0;
     left: 0;
     opacity: 0.7; }
+  #header-body #hb-phone-button-text {
+    line-height: 90%;
+    color: #263856;
+    position: absolute;
+    top: calc(100% - 82%);
+    width: 100%; }
+    #header-body #hb-phone-button-text #hb-button-text {
+      display: inline-block;
+      position: absolute;
+      left: calc(100% - 82%); }
+      #header-body #hb-phone-button-text #hb-button-text p {
+        text-align: left;
+        line-height: 1.3em;
+        letter-spacing: .9px;
+        margin: 0px; }
+      #header-body #hb-phone-button-text #hb-button-text #p1 {
+        font-size: 3vw;
+        width: 65%; }
+      #header-body #hb-phone-button-text #hb-button-text #p2 {
+        font-size: 2.5vw;
+        font-weight: 100;
+        width: 51%; }
+      #header-body #hb-phone-button-text #hb-button-text #button {
+        text-align: left;
+        background-color: #38af38;
+        color: #fff;
+        font-weight: 600;
+        padding: 10px 20px 10px 20px;
+        margin-top: 20px;
+        border-radius: 5px;
+        width: 98px;
+        cursor: pointer; }
+    #header-body #hb-phone-button-text #phone {
+      width: 30%;
+      min-width: 200px;
+      padding-left: 38%; }
 
 #header-footer {
-  background-color: #e4e4e4; }
-  #header-footer #wifi, #header-footer #comment {
-    width: 54px;
-    background-color: #fdb448;
-    border-radius: 100px; }
-    #header-footer #wifi i.fa.fa-wifi, #header-footer #comment i.fa.fa-wifi, #header-footer #comment i.fa.fa-comment {
-      padding: 10px;
-      font-size: 30px;
-      color: #fff; }
-  #header-footer #comment i.fa.fa-comment {
-    padding: 12px; }
+  background-color: #e8e8e8;
+  text-align: center; }
+  #header-footer #hf-wifi, #header-footer #hf-connect, #header-footer #hf-comment, #header-footer #main-con #bottom-con #bc-left #icon-con #hf-connect, #main-con #bottom-con #bc-left #icon-con #header-footer #hf-connect, #header-footer #main-con #bottom-con #bc-left #icon-con #hf-comment, #main-con #bottom-con #bc-left #icon-con #header-footer #hf-comment {
+    width: 290px;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 5px 0px 5px 0px; }
+    #header-footer #hf-wifi #wifi, #header-footer #hf-connect #wifi, #header-footer #hf-comment #wifi, #header-footer #main-con #bottom-con #bc-left #icon-con #hf-connect #wifi, #main-con #bottom-con #bc-left #icon-con #header-footer #hf-connect #wifi, #header-footer #main-con #bottom-con #bc-left #icon-con #hf-comment #wifi, #main-con #bottom-con #bc-left #icon-con #header-footer #hf-comment #wifi, #header-footer #hf-connect #connect, #header-footer #hf-connect #main-con #bottom-con #bc-left #icon-con #hf-comment #connect, #header-footer #hf-comment #comment, #header-footer #hf-comment #main-con #bottom-con #bc-left #icon-con #hf-connect #comment, #main-con #bottom-con #bc-left #icon-con #hf-connect #header-footer #hf-wifi #connect, #header-footer #main-con #bottom-con #bc-left #icon-con #hf-connect #connect, #main-con #bottom-con #bc-left #icon-con #header-footer #hf-connect #connect, #main-con #bottom-con #bc-left #icon-con #hf-connect #header-footer #hf-comment #connect, #main-con #bottom-con #bc-left #icon-con #hf-comment #header-footer #hf-wifi #comment, #main-con #bottom-con #bc-left #icon-con #hf-comment #header-footer #hf-connect #comment, #header-footer #main-con #bottom-con #bc-left #icon-con #hf-comment #comment, #main-con #bottom-con #bc-left #icon-con #header-footer #hf-comment #comment {
+      display: inline-flex; }
   #header-footer p {
-    text-align: left; }
+    text-align: left;
+    width: 175px;
+    font-family: inherit;
+    font-size: 15px;
+    vertical-align: bottom;
+    margin-bottom: 12px;
+    color: #263856;
+    display: inline-block; }
+  #header-footer img {
+    height: 50px;
+    padding: 10px; }
+
+#main-con {
+  color: #263856;
+  text-align: center; }
+  #main-con #top-con {
+    padding-top: 20px; }
+    #main-con #top-con #phone {
+      width: 180px; }
+    #main-con #top-con #top-con-button-text {
+      display: inline-block;
+      vertical-align: top;
+      width: 450px;
+      padding-left: 15px; }
+      #main-con #top-con #top-con-button-text p {
+        text-align: left;
+        margin: 0px;
+        letter-spacing: 1px; }
+      #main-con #top-con #top-con-button-text #p1 {
+        font-size: 23px;
+        padding: 10px 0px 10px 0px; }
+      #main-con #top-con #top-con-button-text #p2 {
+        font-size: 16px; }
+      #main-con #top-con #top-con-button-text #button {
+        text-align: left;
+        background-color: #38af38;
+        color: #fff;
+        font-weight: 600;
+        padding: 10px 20px 10px 20px;
+        margin-top: 20px;
+        border-radius: 5px;
+        width: 98px;
+        cursor: pointer;
+        margin-top: 15px; }
+  #main-con #bottom-con {
+    padding-top: 20px; }
+    #main-con #bottom-con #bc-left {
+      display: inline-block;
+      width: 375px; }
+      #main-con #bottom-con #bc-left p {
+        font-size: 23px;
+        margin: 0px;
+        text-align: left; }
+      #main-con #bottom-con #bc-left #phone {
+        vertical-align: top;
+        width: 90px;
+        padding-top: 10px; }
+      #main-con #bottom-con #bc-left #icon-con {
+        width: 255px;
+        display: inline-block;
+        margin-left: 10px; }
+        #main-con #bottom-con #bc-left #icon-con #hf-wifi, #main-con #bottom-con #bc-left #icon-con #hf-connect, #main-con #bottom-con #bc-left #icon-con #hf-comment {
+          display: inline-block;
+          vertical-align: middle;
+          text-align: left; }
+          #main-con #bottom-con #bc-left #icon-con #hf-wifi #wifi, #main-con #bottom-con #bc-left #icon-con #hf-connect #wifi, #main-con #bottom-con #bc-left #icon-con #hf-comment #wifi, #header-footer #hf-connect #main-con #bottom-con #bc-left #icon-con #hf-wifi #connect, #header-footer #hf-connect #main-con #bottom-con #bc-left #icon-con #hf-comment #connect, #header-footer #hf-comment #main-con #bottom-con #bc-left #icon-con #hf-wifi #comment, #header-footer #hf-comment #main-con #bottom-con #bc-left #icon-con #hf-connect #comment, #main-con #bottom-con #bc-left #icon-con #hf-connect #connect, #main-con #bottom-con #bc-left #icon-con #hf-comment #comment {
+            float: left; }
+          #main-con #bottom-con #bc-left #icon-con #hf-wifi img, #main-con #bottom-con #bc-left #icon-con #hf-connect img, #main-con #bottom-con #bc-left #icon-con #hf-comment img {
+            height: 50px;
+            padding: 10px;
+            padding: 10px 10px 0px 0px; }
+          #main-con #bottom-con #bc-left #icon-con #hf-wifi p, #main-con #bottom-con #bc-left #icon-con #hf-connect p, #main-con #bottom-con #bc-left #icon-con #hf-comment p {
+            text-align: left;
+            width: 175px;
+            font-family: inherit;
+            font-size: 15px;
+            vertical-align: bottom;
+            margin-bottom: 12px;
+            color: #263856;
+            margin: 20px 0px 0px 0px;
+            background-color: #e8e8e8;
+            width: 255px;
+            border-radius: 20px 0px 0px 20px; }
+        #main-con #bottom-con #bc-left #icon-con #hf-connect img {
+          height: 50px;
+          padding: 10px;
+          padding: 10px 10px 0px 0px; }
+        #main-con #bottom-con #bc-left #icon-con #hf-connect p {
+          text-align: left;
+          width: 175px;
+          font-family: inherit;
+          font-size: 15px;
+          vertical-align: bottom;
+          margin-bottom: 12px;
+          color: #263856;
+          margin: 20px 0px 0px 0px;
+          background-color: #e8e8e8;
+          width: 255px;
+          border-radius: 20px 0px 0px 20px; }
+        #main-con #bottom-con #bc-left #icon-con #hf-comment img {
+          height: 50px;
+          padding: 10px;
+          padding: 10px 10px 0px 0px; }
+        #main-con #bottom-con #bc-left #icon-con #hf-comment p {
+          text-align: left;
+          width: 175px;
+          font-family: inherit;
+          font-size: 15px;
+          vertical-align: bottom;
+          margin-bottom: 12px;
+          color: #263856;
+          margin: 20px 0px 0px 0px;
+          background-color: #e8e8e8;
+          width: 255px;
+          border-radius: 20px 0px 0px 20px; }
+    #main-con #bottom-con #bc-right {
+      display: inline-block;
+      width: 300px;
+      background-color: #263856; }
 
 /*# sourceMappingURL=index.css.map */

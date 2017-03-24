@@ -1,28 +1,3 @@
-/* webkit tools */
-::-webkit-input-placeholder {
-  color: #fff;
-  font-family: "Roboto", sans-serif;
-  font-weight: 100;
-  font-size: 13px; }
-
-::-moz-placeholder {
-  color: #fff;
-  font-family: "Roboto", sans-serif;
-  font-weight: 100;
-  font-size: 13px; }
-
-:-ms-input-placeholder {
-  color: #fff;
-  font-family: "Roboto", sans-serif;
-  font-weight: 100;
-  font-size: 13px; }
-
-:-moz-placeholder {
-  color: #fff;
-  font-family: "Roboto", sans-serif;
-  font-weight: 100;
-  font-size: 13px; }
-
 body {
   margin: 0 auto;
   font-family: "Roboto", sans-serif; }
@@ -31,6 +6,60 @@ a {
   color: #fff;
   text-decoration: none;
   cursor: pointer; }
+
+#nav-clicked {
+  display: none;
+  background-color: #263856;
+  border-top: 1px solid #fff;
+  padding-top: 20px;
+  color: #fff;
+  text-align: center; }
+  #nav-clicked #search-box {
+    display: inline-block;
+    border: 2px solid #fff;
+    background-color: #263856;
+    width: 90%; }
+    #nav-clicked #search-box i.fa.fa-search {
+      cursor: pointer;
+      padding: 7px 10px 10px 10px;
+      float: left; }
+    #nav-clicked #search-box input {
+      vertical-align: middle;
+      padding: 6px;
+      border: none;
+      font-size: 15px;
+      color: #fff;
+      background-color: #263856;
+      width: 80%; }
+    #nav-clicked #search-box input::-webkit-input-placeholder {
+      color: #fff;
+      font-family: "Roboto", sans-serif;
+      font-weight: 100;
+      font-size: 15px; }
+    #nav-clicked #search-box input::-moz-placeholder {
+      color: #fff;
+      font-family: "Roboto", sans-serif;
+      font-weight: 100;
+      font-size: 15px; }
+    #nav-clicked #search-box input:-ms-input-placeholder {
+      color: #fff;
+      font-family: "Roboto", sans-serif;
+      font-weight: 100;
+      font-size: 15px; }
+    #nav-clicked #search-box input:-moz-placeholder {
+      color: #fff;
+      font-family: "Roboto", sans-serif;
+      font-weight: 100;
+      font-size: 15px; }
+    #nav-clicked #search-box input:focus {
+      outline: none !important; }
+  #nav-clicked #link {
+    padding: 20px; }
+    #nav-clicked #link a {
+      margin: 0px 8% 0px 8%;
+      letter-spacing: 2px; }
+    #nav-clicked #link a:hover {
+      border-bottom: 1px solid #fff; }
 
 #header-head-con {
   background-color: #263856;
@@ -49,27 +78,61 @@ a {
         padding: 5px; }
     #header-head-con #header-head #link {
       display: inline-block;
-      padding-left: 10%;
-      padding-right: 10%; }
+      width: 55%; }
       #header-head-con #header-head #link a {
-        padding: 20px;
+        margin: 19px;
         letter-spacing: 2px; }
+      #header-head-con #header-head #link a:hover {
+        border-bottom: 1px solid #fff; }
     #header-head-con #header-head #search-box {
       display: inline-block;
       border: 2px solid #fff;
-      background-color: #263856; }
+      background-color: #263856;
+      width: 20%; }
       #header-head-con #header-head #search-box i.fa.fa-search {
         cursor: pointer;
-        padding-left: 10px; }
+        padding: 7px 10px 10px 10px;
+        float: left; }
       #header-head-con #header-head #search-box input {
         vertical-align: middle;
         padding: 6px;
         border: none;
         font-size: 15px;
         color: #fff;
-        background-color: #263856; }
+        background-color: #263856;
+        width: 60%; }
+      #header-head-con #header-head #search-box input::-webkit-input-placeholder {
+        color: #fff;
+        font-family: "Roboto", sans-serif;
+        font-weight: 100;
+        font-size: 15px; }
+      #header-head-con #header-head #search-box input::-moz-placeholder {
+        color: #fff;
+        font-family: "Roboto", sans-serif;
+        font-weight: 100;
+        font-size: 15px; }
+      #header-head-con #header-head #search-box input:-ms-input-placeholder {
+        color: #fff;
+        font-family: "Roboto", sans-serif;
+        font-weight: 100;
+        font-size: 15px; }
+      #header-head-con #header-head #search-box input:-moz-placeholder {
+        color: #fff;
+        font-family: "Roboto", sans-serif;
+        font-weight: 100;
+        font-size: 15px; }
       #header-head-con #header-head #search-box input:focus {
         outline: none !important; }
+    #header-head-con #header-head #header-nav {
+      display: none;
+      padding: 10px 2%;
+      border-left: 1px solid;
+      float: right;
+      cursor: pointer;
+      margin-top: 3px; }
+      #header-head-con #header-head #header-nav span {
+        font-weight: 100;
+        padding-left: 5px; }
 
 #header-body {
   text-align: center;
@@ -78,7 +141,8 @@ a {
     width: 100%;
     top: 0;
     left: 0;
-    opacity: 0.7; }
+    opacity: 0.7;
+    max-height: 500px; }
   #header-body #hb-phone-button-text {
     line-height: 90%;
     color: #263856;
@@ -87,8 +151,7 @@ a {
     width: 100%; }
     #header-body #hb-phone-button-text #hb-button-text {
       display: inline-block;
-      position: absolute;
-      left: calc(100% - 82%); }
+      position: absolute; }
       #header-body #hb-phone-button-text #hb-button-text p {
         text-align: left;
         line-height: 1.3em;
@@ -106,7 +169,7 @@ a {
         background-color: #38af38;
         color: #fff;
         font-weight: 600;
-        padding: 10px 20px 10px 20px;
+        padding: 8px 20px 7px 20px;
         margin-top: 20px;
         border-radius: 5px;
         width: 98px;
@@ -116,32 +179,36 @@ a {
       min-width: 200px;
       padding-left: 38%; }
 
-#header-footer {
+#header-footer-con {
   background-color: #e8e8e8;
   text-align: center; }
-  #header-footer #hf-wifi, #header-footer #hf-connect, #header-footer #hf-comment, #header-footer #main-con #bottom-con #bc-left #icon-con #hf-connect, #main-con #bottom-con #bc-left #icon-con #header-footer #hf-connect, #header-footer #main-con #bottom-con #bc-left #icon-con #hf-comment, #main-con #bottom-con #bc-left #icon-con #header-footer #hf-comment {
-    width: 290px;
-    display: inline-block;
-    vertical-align: middle;
-    padding: 5px 0px 5px 0px; }
-    #header-footer #hf-wifi #wifi, #header-footer #hf-connect #wifi, #header-footer #hf-comment #wifi, #header-footer #main-con #bottom-con #bc-left #icon-con #hf-connect #wifi, #main-con #bottom-con #bc-left #icon-con #header-footer #hf-connect #wifi, #header-footer #main-con #bottom-con #bc-left #icon-con #hf-comment #wifi, #main-con #bottom-con #bc-left #icon-con #header-footer #hf-comment #wifi, #header-footer #hf-connect #connect, #header-footer #hf-connect #main-con #bottom-con #bc-left #icon-con #hf-comment #connect, #header-footer #hf-comment #comment, #header-footer #hf-comment #main-con #bottom-con #bc-left #icon-con #hf-connect #comment, #main-con #bottom-con #bc-left #icon-con #hf-connect #header-footer #hf-wifi #connect, #header-footer #main-con #bottom-con #bc-left #icon-con #hf-connect #connect, #main-con #bottom-con #bc-left #icon-con #header-footer #hf-connect #connect, #main-con #bottom-con #bc-left #icon-con #hf-connect #header-footer #hf-comment #connect, #main-con #bottom-con #bc-left #icon-con #hf-comment #header-footer #hf-wifi #comment, #main-con #bottom-con #bc-left #icon-con #hf-comment #header-footer #hf-connect #comment, #header-footer #main-con #bottom-con #bc-left #icon-con #hf-comment #comment, #main-con #bottom-con #bc-left #icon-con #header-footer #hf-comment #comment {
-      display: inline-flex; }
-  #header-footer p {
-    text-align: left;
-    width: 175px;
-    font-family: inherit;
-    font-size: 15px;
-    vertical-align: bottom;
-    margin-bottom: 12px;
-    color: #263856;
-    display: inline-block; }
-  #header-footer img {
-    height: 50px;
-    padding: 10px; }
+  #header-footer-con #header-footer {
+    width: 80%;
+    margin: 0 auto; }
+    #header-footer-con #header-footer #hf-wifi, #header-footer-con #header-footer #hf-connect, #header-footer-con #header-footer #hf-comment {
+      width: 32%;
+      display: inline-block;
+      vertical-align: middle;
+      padding: 5px 0px 5px 0px; }
+      #header-footer-con #header-footer #hf-wifi #wifi, #header-footer-con #header-footer #hf-connect #wifi, #header-footer-con #header-footer #hf-comment #wifi, #header-footer-con #header-footer #hf-connect #connect, #header-footer-con #header-footer #hf-comment #comment {
+        display: inline-flex; }
+    #header-footer-con #header-footer p {
+      text-align: left;
+      width: 175px;
+      font-family: inherit;
+      font-size: 15px;
+      vertical-align: bottom;
+      margin-bottom: 12px;
+      color: #263856;
+      display: inline-block; }
+    #header-footer-con #header-footer img {
+      height: 50px;
+      padding: 12px; }
 
 #main-con {
   color: #263856;
-  text-align: center; }
+  text-align: center;
+  padding-bottom: 2%; }
   #main-con #top-con {
     padding-top: 20px; }
     #main-con #top-con #phone {
@@ -165,7 +232,7 @@ a {
         background-color: #38af38;
         color: #fff;
         font-weight: 600;
-        padding: 10px 20px 10px 20px;
+        padding: 8px 20px 7px 20px;
         margin-top: 20px;
         border-radius: 5px;
         width: 98px;
@@ -175,7 +242,8 @@ a {
     padding-top: 20px; }
     #main-con #bottom-con #bc-left {
       display: inline-block;
-      width: 375px; }
+      width: 375px;
+      padding-bottom: 20px; }
       #main-con #bottom-con #bc-left p {
         font-size: 23px;
         margin: 0px;
@@ -188,17 +256,17 @@ a {
         width: 255px;
         display: inline-block;
         margin-left: 10px; }
-        #main-con #bottom-con #bc-left #icon-con #hf-wifi, #main-con #bottom-con #bc-left #icon-con #hf-connect, #main-con #bottom-con #bc-left #icon-con #hf-comment {
+        #main-con #bottom-con #bc-left #icon-con #hf-wifi2, #main-con #bottom-con #bc-left #icon-con #hf-connect2, #main-con #bottom-con #bc-left #icon-con #hf-comment2 {
           display: inline-block;
           vertical-align: middle;
           text-align: left; }
-          #main-con #bottom-con #bc-left #icon-con #hf-wifi #wifi, #main-con #bottom-con #bc-left #icon-con #hf-connect #wifi, #main-con #bottom-con #bc-left #icon-con #hf-comment #wifi, #header-footer #hf-connect #main-con #bottom-con #bc-left #icon-con #hf-wifi #connect, #header-footer #hf-connect #main-con #bottom-con #bc-left #icon-con #hf-comment #connect, #header-footer #hf-comment #main-con #bottom-con #bc-left #icon-con #hf-wifi #comment, #header-footer #hf-comment #main-con #bottom-con #bc-left #icon-con #hf-connect #comment, #main-con #bottom-con #bc-left #icon-con #hf-connect #connect, #main-con #bottom-con #bc-left #icon-con #hf-comment #comment {
+          #main-con #bottom-con #bc-left #icon-con #hf-wifi2 #wifi2, #main-con #bottom-con #bc-left #icon-con #hf-connect2 #wifi2, #main-con #bottom-con #bc-left #icon-con #hf-comment2 #wifi2, #main-con #bottom-con #bc-left #icon-con #hf-connect2 #connect2, #main-con #bottom-con #bc-left #icon-con #hf-comment2 #comment2 {
             float: left; }
-          #main-con #bottom-con #bc-left #icon-con #hf-wifi img, #main-con #bottom-con #bc-left #icon-con #hf-connect img, #main-con #bottom-con #bc-left #icon-con #hf-comment img {
+          #main-con #bottom-con #bc-left #icon-con #hf-wifi2 img, #main-con #bottom-con #bc-left #icon-con #hf-connect2 img, #main-con #bottom-con #bc-left #icon-con #hf-comment2 img {
             height: 50px;
-            padding: 10px;
+            padding: 12px;
             padding: 10px 10px 0px 0px; }
-          #main-con #bottom-con #bc-left #icon-con #hf-wifi p, #main-con #bottom-con #bc-left #icon-con #hf-connect p, #main-con #bottom-con #bc-left #icon-con #hf-comment p {
+          #main-con #bottom-con #bc-left #icon-con #hf-wifi2 p, #main-con #bottom-con #bc-left #icon-con #hf-connect2 p, #main-con #bottom-con #bc-left #icon-con #hf-comment2 p {
             text-align: left;
             width: 175px;
             font-family: inherit;
@@ -210,11 +278,11 @@ a {
             background-color: #e8e8e8;
             width: 255px;
             border-radius: 20px 0px 0px 20px; }
-        #main-con #bottom-con #bc-left #icon-con #hf-connect img {
+        #main-con #bottom-con #bc-left #icon-con #hf-connect2 img {
           height: 50px;
-          padding: 10px;
+          padding: 12px;
           padding: 10px 10px 0px 0px; }
-        #main-con #bottom-con #bc-left #icon-con #hf-connect p {
+        #main-con #bottom-con #bc-left #icon-con #hf-connect2 p {
           text-align: left;
           width: 175px;
           font-family: inherit;
@@ -226,11 +294,11 @@ a {
           background-color: #e8e8e8;
           width: 255px;
           border-radius: 20px 0px 0px 20px; }
-        #main-con #bottom-con #bc-left #icon-con #hf-comment img {
+        #main-con #bottom-con #bc-left #icon-con #hf-comment2 img {
           height: 50px;
-          padding: 10px;
+          padding: 12px;
           padding: 10px 10px 0px 0px; }
-        #main-con #bottom-con #bc-left #icon-con #hf-comment p {
+        #main-con #bottom-con #bc-left #icon-con #hf-comment2 p {
           text-align: left;
           width: 175px;
           font-family: inherit;
@@ -245,6 +313,159 @@ a {
     #main-con #bottom-con #bc-right {
       display: inline-block;
       width: 300px;
-      background-color: #263856; }
+      background-color: #263856;
+      border-radius: 8px;
+      margin-left: 10px; }
+      #main-con #bottom-con #bc-right #tab {
+        margin-bottom: 15px;
+        background-color: #f9b046;
+        width: 100%;
+        border-radius: 10px; }
+        #main-con #bottom-con #bc-right #tab #tab-left, #main-con #bottom-con #bc-right #tab #tab-right {
+          display: inline-block;
+          padding: 10px 19px 10px 19px;
+          width: 111px;
+          text-align: center;
+          color: #fff;
+          font-weight: 200;
+          margin-left: -2px;
+          margin-right: 2px;
+          border-radius: 8px 8px 0px 0px;
+          background-color: #263856; }
+        #main-con #bottom-con #bc-right #tab #tab-right {
+          background-color: #f9b046;
+          margin-left: -4px;
+          margin-right: -2px; }
+      #main-con #bottom-con #bc-right #bc-right-input input {
+        letter-spacing: 1px;
+        width: 226px;
+        padding: 7px;
+        margin-bottom: 15px;
+        border-radius: 8px;
+        font-size: 15px;
+        color: #263856; }
+      #main-con #bottom-con #bc-right #bc-right-input input::-webkit-input-placeholder {
+        color: #263856;
+        font-family: "Roboto", sans-serif;
+        font-weight: 200;
+        font-size: 15px;
+        letter-spacing: 1px; }
+      #main-con #bottom-con #bc-right #bc-right-input input::-moz-placeholder {
+        color: #263856;
+        font-family: "Roboto", sans-serif;
+        font-weight: 200;
+        font-size: 15px;
+        letter-spacing: 1px; }
+      #main-con #bottom-con #bc-right #bc-right-input input:-ms-input-placeholder {
+        color: #263856;
+        font-family: "Roboto", sans-serif;
+        font-weight: 200;
+        font-size: 15px;
+        letter-spacing: 1px; }
+      #main-con #bottom-con #bc-right #bc-right-input input:-moz-placeholder {
+        color: #263856;
+        font-family: "Roboto", sans-serif;
+        font-weight: 200;
+        font-size: 15px;
+        letter-spacing: 1px; }
+      #main-con #bottom-con #bc-right #bc-right-input input:focus {
+        outline: none !important; }
+      #main-con #bottom-con #bc-right #button {
+        text-align: left;
+        background-color: #38af38;
+        color: #fff;
+        font-weight: 600;
+        padding: 8px 20px 7px 20px;
+        margin-top: 20px;
+        border-radius: 5px;
+        width: 98px;
+        cursor: pointer;
+        margin: 0px 0px 15px 135px; }
+
+@media only screen and (max-width: 320px) {
+  /* smartphones, iPhone, portrait 480x320 phones */ }
+@media only screen and (max-width: 481px) {
+  #main-con #top-con #top-con-button-text {
+    vertical-align: top;
+    width: 80%;
+    margin: 0 auto; } }
+@media only screen and (max-width: 641px) {
+  #header-footer-con #header-footer p {
+    width: 75%;
+    padding-left: 2%;
+    transition: .3s; }
+
+  #header-footer-con #header-footer img {
+    padding: 5% 10% 5% 15%;
+    transition: .3s; }
+
+  #hf-wifi, #header-footer-con #header-footer #hf-connect, #header-footer-con #header-footer #hf-comment, #hf-connect, #hf-comment {
+    width: 100% !important;
+    display: block !important;
+    transition: .3s; } }
+@media only screen and (max-width: 687px) {
+  #main-con #bottom-con #bc-left p {
+    text-align: center;
+    transition: .3s; }
+
+  #header-head-con #header-head #link, #header-head-con #header-head #search-box, #header-body #hb-phone-button-text #phone, #header-body #bg {
+    display: none; }
+
+  #header-body #hb-phone-button-text, #header-body #hb-phone-button-text #hb-button-text {
+    top: initial !important;
+    position: initial;
+    margin-left: 5%; }
+
+  #header-body #hb-phone-button-text {
+    padding: 10% 0px; }
+
+  #header-head-con {
+    text-align: inherit; }
+
+  #header-head-con #header-head #header-nav {
+    display: block; }
+
+  #header-body #hb-phone-button-text #hb-button-text #p1 {
+    font-size: 25px;
+    width: 90%; }
+
+  #header-body #hb-phone-button-text #hb-button-text #p2 {
+    font-size: 20px;
+    font-weight: 100;
+    width: 80%; } }
+@media only screen and (max-width: 800px) {
+  #header-head-con #header-head #link {
+    width: 50%;
+    transition: .5s; }
+
+  #header-head-con #header-head #link a {
+    padding-left: 2%;
+    padding-right: 2%; } }
+@media (max-width: 900px) {
+  #hf-wifi, #header-footer-con #header-footer #hf-connect, #header-footer-con #header-footer #hf-comment, #hf-connect, #hf-comment {
+    width: 32%;
+    transition: .3s; }
+
+  #header-footer img {
+    padding: 0px 0px 12px 0px;
+    transition: .3s; } }
+@media only screen and (max-width: 1100px) {
+  #header-head-con #header-head {
+    width: 100%;
+    transition: .5s; }
+
+  #header-footer-con #header-footer {
+    width: 100%;
+    transition: .5s; }
+
+  #header-body #hb-phone-button-text {
+    top: 120px;
+    transition: .2s; } }
+@media only screen and (min-width: 1300px) {
+  #header-head-con #header-head #search-box {
+    width: 20%; }
+
+  #header-head-con #header-head #search-box input {
+    width: 70%; } }
 
 /*# sourceMappingURL=index.css.map */

@@ -4,11 +4,11 @@ $main-font: 17px;
 $hf-color: #e8e8e8;
 $button-color: #38af38;
 
-@mixin placeholder {
-    color: #fff; 
+@mixin placeholder ($color, $font-weight){
+    color: $color; 
     font-family: $main-font-family; 
-    font-weight: 100;
-    font-size: 13px;
+    font-weight: $font-weight;
+    font-size: 15px;
 }
 
 @mixin button {
@@ -16,7 +16,7 @@ $button-color: #38af38;
     background-color: $button-color;
     color: #fff;
     font-weight: 600;
-    padding: 10px 20px 10px 20px;
+    padding: 8px 20px 7px 20px;
     margin-top: 20px;
     border-radius: 5px;
     width: 98px;
@@ -25,7 +25,7 @@ $button-color: #38af38;
 
 @mixin img-icon {
     height: 50px;
-    padding: 10px;
+    padding: 12px;
 }
 
 @mixin p {
@@ -38,12 +38,6 @@ $button-color: #38af38;
     color: $main-color;
 }
 
-/* webkit tools */
-::-webkit-input-placeholder { @include placeholder(); }
-::-moz-placeholder { @include placeholder(); }
-:-ms-input-placeholder { @include placeholder(); }
-:-moz-placeholder { @include placeholder(); }
-
 body {
     margin: 0 auto;
     font-family: $main-font-family;
@@ -53,6 +47,61 @@ a {
     color: #fff;
     text-decoration: none;
     cursor: pointer;
+}
+
+#nav-clicked {
+    display: none;
+    background-color: $main-color;
+    border-top: 1px solid #fff;
+    padding-top: 20px;
+    color: #fff;
+    text-align: center;
+
+
+     #search-box {
+            display: inline-block;
+            border: 2px solid #fff;
+            background-color: #263856;
+            width: 90%;
+
+            i.fa.fa-search {
+                cursor: pointer;
+                padding: 7px 10px 10px 10px;
+                float: left;
+            }
+
+            input {
+                vertical-align: middle;
+                padding: 6px;
+                border: none;
+                font-size: 15px;
+                color: #fff;
+                background-color: #263856;
+                width: 80%;
+            }
+
+            input::-webkit-input-placeholder { @include placeholder(#fff, 100); }
+            input::-moz-placeholder { @include placeholder(#fff, 100); }
+            input:-ms-input-placeholder { @include placeholder(#fff, 100); }
+            input:-moz-placeholder { @include placeholder(#fff, 100); }
+            
+            input:focus {
+                outline: none !important;
+            }
+     }
+
+    #link {
+        padding: 20px;
+
+        a {
+            margin: 0px 8% 0px 8%;
+            letter-spacing: 2px;
+        }
+
+        a:hover {
+            border-bottom: 1px solid #fff;
+        }
+    }
 }
 
 #header-head-con {
@@ -65,6 +114,7 @@ a {
     #header-head {
         margin: 0 auto;
         width: 80%;
+        
        
         #header-logo {
             display: inline-block;
@@ -78,12 +128,15 @@ a {
 
         #link {
             display: inline-block;
-            padding-left: 10%;
-            padding-right: 10%;
+            width: 55%;
 
             a {
-                padding: 20px;
+                margin: 19px;
                 letter-spacing: 2px;
+            }
+
+            a:hover {
+                border-bottom: 1px solid #fff;
             }
         }
 
@@ -91,11 +144,12 @@ a {
             display: inline-block;
             border: 2px solid #fff;
             background-color: #263856;
-            
+            width: 20%;
 
             i.fa.fa-search {
                 cursor: pointer;
-                padding-left: 10px;
+                padding: 7px 10px 10px 10px;
+                float: left;
             }
 
             input {
@@ -105,10 +159,30 @@ a {
                 font-size: 15px;
                 color: #fff;
                 background-color: #263856;
+                width: 60%;
             }
+
+            input::-webkit-input-placeholder { @include placeholder(#fff, 100); }
+            input::-moz-placeholder { @include placeholder(#fff, 100); }
+            input:-ms-input-placeholder { @include placeholder(#fff, 100); }
+            input:-moz-placeholder { @include placeholder(#fff, 100); }
             
             input:focus {
                 outline: none !important;
+            }
+        }
+
+        #header-nav {
+            display: none;
+            padding: 10px 2%;
+            border-left: 1px solid;
+            float: right;
+            cursor: pointer;
+            margin-top: 3px;
+
+            span {
+                font-weight: 100;
+                padding-left: 5px;
             }
         }
     }
@@ -123,6 +197,7 @@ a {
         top: 0;
         left: 0;
         opacity: 0.7;
+        max-height: 500px;
     }
 
     #hb-phone-button-text {
@@ -135,7 +210,6 @@ a {
         #hb-button-text {
             display: inline-block;
             position: absolute;
-            left: calc(100% - 82%);
 
             p {
                 text-align: left;
@@ -168,50 +242,58 @@ a {
     }
 }
 
-#header-footer {
+
+#header-footer-con {
     background-color: $hf-color;
     text-align: center;
 
-    #hf-wifi {
-        width: 290px;
-        display: inline-block;
-        vertical-align: middle;
-        padding: 5px 0px 5px 0px;
+    #header-footer {
+        width: 80%;
+        margin: 0 auto;
 
-        #wifi {
-            display: inline-flex;
+        #hf-wifi {
+            width: 32%;
+            display: inline-block;
+            vertical-align: middle;
+            padding: 5px 0px 5px 0px;
+
+            #wifi {
+                display: inline-flex;
+            }
         }
-    }
 
-    #hf-connect {
-        @extend #hf-wifi;
-        
-        #connect {
-            @extend #wifi;
+        #hf-connect {
+            @extend #hf-wifi;
+            
+            #connect {
+                @extend #wifi;
+            }
         }
-    }
 
-    #hf-comment {
-        @extend #hf-wifi;
+        #hf-comment {
+            @extend #hf-wifi;
 
-        #comment {
-            @extend #wifi;
+            #comment {
+                @extend #wifi;
+            }
         }
-    }
 
-    p {
-        @include p();
-        display: inline-block;
-    }
+        p {
+            @include p();
+            display: inline-block;
+        }
 
-    img {
-        @include img-icon();
+        img {
+            @include img-icon();
+        }
     }
 }
+
 
 #main-con {
     color: #263856;
     text-align: center;
+    padding-bottom: 2%;
 
     #top-con {
         padding-top: 20px;
@@ -254,6 +336,7 @@ a {
         #bc-left {
             display: inline-block;
             width: 375px;
+            padding-bottom: 20px;
 
             p {
                 font-size: 23px;
@@ -272,12 +355,12 @@ a {
                 display: inline-block;
                 margin-left: 10px;
 
-                  #hf-wifi {
+                  #hf-wifi2 {
                         display: inline-block;
                         vertical-align: middle;
                         text-align: left;
 
-                    #wifi {
+                    #wifi2 {
                         float: left;
                     }
 
@@ -295,11 +378,11 @@ a {
                     }
                 }
 
-                #hf-connect {
-                    @extend #hf-wifi;
+                #hf-connect2 {
+                    @extend #hf-wifi2;
                     
-                    #connect {
-                        @extend #wifi;
+                    #connect2 {
+                        @extend #wifi2;
                     }
 
                     img {
@@ -316,11 +399,11 @@ a {
                     }
                 }
 
-                #hf-comment {
-                    @extend #hf-wifi;
+                #hf-comment2 {
+                    @extend #hf-wifi2;
 
-                    #comment {
-                        @extend #wifi;
+                    #comment2 {
+                        @extend #wifi2;
                     }
 
                     img {
@@ -337,14 +420,195 @@ a {
                     }
                 }
             }
-
-          
         }
 
         #bc-right {
             display: inline-block;
             width: 300px;
             background-color: $main-color;
+            border-radius: 8px;
+            margin-left: 10px;
+
+            #tab {
+                margin-bottom: 15px;
+                background-color: #f9b046;
+                width: 100%;
+                border-radius: 10px;
+
+                #tab-left {
+                    display: inline-block;
+                    padding: 10px 19px 10px 19px;
+                    width: 111px;
+                    text-align: center;
+                    color: #fff;
+                    font-weight: 200;
+                    margin-left: -2px;
+                    margin-right: 2px;
+                    border-radius: 8px 8px 0px 0px;
+                    background-color: $main-color;
+                }
+                #tab-right {
+                    @extend #tab-left;
+                    background-color: #f9b046;
+                    margin-left: -4px;
+                    margin-right: -2px;
+                }
+            }
+
+            #bc-right-input {
+
+                input {
+                    letter-spacing: 1px;
+                    width: 226px;
+                    padding: 7px;
+                    margin-bottom: 15px;
+                    border-radius: 8px;
+                    font-size: 15px;
+                    color: #263856;
+                }
+
+                input::-webkit-input-placeholder { @include placeholder($main-color,200); letter-spacing: 1px;}
+                input::-moz-placeholder { @include placeholder($main-color,200); letter-spacing: 1px; }
+                input:-ms-input-placeholder { @include placeholder($main-color,200); letter-spacing: 1px; }
+                input:-moz-placeholder { @include placeholder($main-color,200); letter-spacing: 1px; }
+
+                input:focus {
+                    outline: none !important;
+                }
+            }
+
+            #button {
+                @include button();
+                margin: 0px 0px 15px 135px;
+            }
         }
     }
 }
+
+
+// @media Queries
+@media only screen and (max-width:320px)  { 
+    /* smartphones, iPhone, portrait 480x320 phones */ 
+}
+
+@media only screen and (max-width:481px)  { 
+    #main-con #top-con #top-con-button-text {
+        vertical-align: top;
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (max-width:641px)  { 
+
+    #header-footer-con #header-footer p {
+        width: 75%;
+        padding-left: 2%;
+        transition: .3s;
+    }
+
+    #header-footer-con #header-footer img {
+        padding: 5% 10% 5% 15%;
+        transition: .3s;
+    }
+
+    #hf-wifi, #hf-connect, #hf-comment {
+        width: 100% !important;
+        display: block !important;
+        transition: .3s;
+    }
+}
+
+@media only screen and (max-width:687px) {
+    #main-con #bottom-con #bc-left p {
+        text-align: center;
+        transition: .3s;
+    }
+
+    #header-head-con #header-head #link, #header-head-con #header-head #search-box, #header-body #hb-phone-button-text #phone, #header-body #bg {
+        display: none;
+    }
+
+    #header-body #hb-phone-button-text, #header-body #hb-phone-button-text #hb-button-text {
+        top: initial !important; 
+        position: initial;
+        margin-left: 5%;
+    }
+
+    #header-body #hb-phone-button-text {
+        padding: 10% 0px;
+    }
+
+    #header-head-con {
+        text-align: inherit;
+    }
+
+    #header-head-con #header-head #header-nav {
+        display: block;
+    }
+
+    #header-body #hb-phone-button-text #hb-button-text #p1 {
+        font-size: 25px;
+        width: 90%;
+    }
+
+    #header-body #hb-phone-button-text #hb-button-text #p2 {
+        font-size: 20px;
+        font-weight: 100;
+        width: 80%;
+    }
+  
+}
+
+@media only screen and (max-width:800px)  { 
+    #header-head-con #header-head #link {
+        width: 50%;
+        transition: .5s;
+    }
+
+    #header-head-con #header-head #link a {
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+}
+
+@media (max-width:900px)  { 
+    #hf-wifi, #hf-connect, #hf-comment {
+        width: 32%;
+        transition: .3s;
+    }
+
+    #header-footer img {
+        padding: 0px 0px 12px 0px;
+        transition: .3s;
+    }
+}
+
+@media only screen and (max-width:1100px) { 
+
+    #header-head-con #header-head {
+        width: 100%;
+        transition: .5s;
+    }
+
+    #header-footer-con #header-footer {
+        width: 100%;
+        transition: .5s;
+    }
+
+    #header-body #hb-phone-button-text {
+        top: 120px;
+        transition: .2s;
+    }
+}
+
+@media only screen and  (min-width: 1300px) {
+    #header-head-con #header-head #search-box {
+        width: 20%;
+    }
+
+    #header-head-con #header-head #search-box input {
+        width: 70%;
+    }
+}
+
